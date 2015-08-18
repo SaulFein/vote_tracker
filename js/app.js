@@ -1,5 +1,7 @@
 'use strict'
 
+
+
 var Photo = function(fileLocation) { //constructor
   this.path = fileLocation;
   this.votes = 0;
@@ -10,7 +12,7 @@ var Photo = function(fileLocation) { //constructor
 var alex = new Photo('img/kitten_pictures/Alex.jpg');
 var bob = new Photo('img/kitten_pictures/Bob.jpg');
 var boots = new Photo('img/kitten_pictures/Boots.jpg');
-var felica = new Photo('img/kitten_pictures/Felica.jpg');
+var felicia = new Photo('img/kitten_pictures/Felicia.jpg');
 var frank = new Photo('img/kitten_pictures/Frank.jpg');
 var fred = new Photo('img/kitten_pictures/Fred.jpg');
 var jack = new Photo('img/kitten_pictures/Jack.jpg');
@@ -22,28 +24,12 @@ var steve = new Photo('img/kitten_pictures/Steve.jpg');
 var tigger = new Photo('img/kitten_pictures/Tigger.jpg');
 var todd = new Photo('img/kitten_pictures/Todd.jpg');
 
-var photoArray = [alex, bob, boots, felica, frank, fred, jack, jill, kasey, kora, molly, steve, tigger, todd];
+var photoArray = [alex, bob, boots, felicia, frank, fred, jack, jill, kasey, kora, molly, steve, tigger, todd];
 
 var Tracker = function() {
 
-
 }
 
-Photo.prototype.highlight = function() {
-  //highlight the photo after it is clicked
-};
-
-Tracker.prototype.waitingForVote = function() {
-  //receive the click and
-  //increment the vote count
-  //event listener on each photo(put inside div)
-  //highlight()
-  //drawTheChart()?
-  //giveUserOptionToVoteAgain()
-  //display photos
-  //get random #()
-  //receive vote
-};
 
 Tracker.prototype.getRandomInt = function() {
 
@@ -105,43 +91,65 @@ document.getElementById('right').addEventListener('click', function (e) {
         e.target.style.outline = "solid red 5px";
 });
 
-Tracker.prototype.waitingForVote =  function() {
-  action1()
-  action2()
-  action3()
-};
 
-var countries= document.getElementById("countries").getContext("2d");
-new Chart(countries).Pie(pieData, pieOptions);
 var pieData = [
   {
-    value: 20,
+    value: 1,
     color:"#878BB6"
   },
+
   {
-    value : 40,
-    color : "#4ACAB4"
-  },
-  {
-    value : 10,
+    value : 1,
     color : "#FF8153"
   },
-  {
-    value : 30,
-    color : "#FFEA88"
-  }
+
 ];
+
 var pieOptions = {
   segmentShowStroke : false,
   animateScale : true
 }
 
+var countries= document.getElementById("countries").getContext("2d");
+new Chart(countries).Pie(pieData, pieOptions);
 
-Tracker.prototype.displayWinner = function() {
- /* action4()
+
+
+
+/*Tracker.prototype.waitingForVote =  function() {
+  action1()
+  action2()
+  action3()
+};*/
+
+
+
+/*var button = document.getElementById('another');
+button.addEventListener('click', function() {
+  console.log('clicky');
+});*/
+
+/*Tracker.prototype.displayWinner = function() {
+  action4()
   action5()
   action6()
-  highlight photo()*/
-};
+  highlight photo()
+};*/
 /////////////////////////////////////////
 //some 'document.getElementById' variables to access and maniputlate the document
+
+/*Photo.prototype.highlight = function() {
+  //highlight the photo after it is clicked
+};
+
+Tracker.prototype.waitingForVote = function() {
+  //receive the click and
+  //increment the vote count
+  //event listener on each photo(put inside div)
+  //highlight()
+  //drawTheChart()?
+  //giveUserOptionToVoteAgain()
+  //display photos
+  //get random #()
+  //receive vote
+};*/
