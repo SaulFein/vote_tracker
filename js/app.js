@@ -105,14 +105,12 @@ document.getElementById('right').addEventListener('click', function (e) {
         e.target.style.outline = "solid red 5px";
 });
 
-Tracker.prototype.waitingForVote =  function() {
+/*Tracker.prototype.waitingForVote =  function() {
   action1()
   action2()
   action3()
-};
+};*/
 
-var countries= document.getElementById("countries").getContext("2d");
-new Chart(countries).Pie(pieData, pieOptions);
 var pieData = [
   {
     value: 20,
@@ -131,17 +129,21 @@ var pieData = [
     color : "#FFEA88"
   }
 ];
+
 var pieOptions = {
   segmentShowStroke : false,
   animateScale : true
 }
 
 
-Tracker.prototype.displayWinner = function() {
- /* action4()
+var countries= document.getElementById("countries").getContext("2d");
+new Chart(countries).Pie(pieData, pieOptions);
+
+/*Tracker.prototype.displayWinner = function() {
+  action4()
   action5()
   action6()
-  highlight photo()*/
-};
+  highlight photo()
+};*/
 /////////////////////////////////////////
 //some 'document.getElementById' variables to access and maniputlate the document
