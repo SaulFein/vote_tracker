@@ -79,7 +79,7 @@ battleCats.displayPhotos()
 
 var vote1 = document.getElementById('leftCat')
 vote1.addEventListener('click', function(e){
-  var targetSrc = e.target.src.slice(43, 80);
+  var targetSrc = e.target.src.slice(39, 80);
     photoArray.forEach(function(val) {
       if (val.path === targetSrc) {
         val.votes++;
@@ -89,7 +89,7 @@ vote1.addEventListener('click', function(e){
 
 var vote2 = document.getElementById('rightCat')
 vote2.addEventListener('click', function(e){
-  var targetSrc = e.target.src.slice(43, 80);
+  var targetSrc = e.target.src.slice(39, 80);
     photoArray.forEach(function(val) {
       if (val.path === targetSrc) {
         val.votes++;
@@ -145,4 +145,3 @@ Tracker.prototype.displayWinner = function() {
 };
 /////////////////////////////////////////
 //some 'document.getElementById' variables to access and maniputlate the document
-
